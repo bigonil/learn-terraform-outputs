@@ -7,6 +7,12 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
+variable "aws_profile" {
+  description = "AWS profile"
+  type        = string
+  default     = "lb-aws-admin"
+}
+
 variable "vpc_cidr_block" {
   description = "CIDR block for VPC"
   type        = string
@@ -59,13 +65,13 @@ variable "instance_type" {
 # usernames and passwords into source control.
 
 variable "db_username" {
-  description = "Database administrator username."
+  description = "Database administrator username"
   type        = string
-  default     = "admin"
+  sensitive   = true
 }
 
 variable "db_password" {
-  description = "Database administrator password."
+  description = "Database administrator password"
   type        = string
-  default     = "notasecurepassword"
+  sensitive   = true
 }
