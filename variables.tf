@@ -52,7 +52,7 @@ variable "private_subnet_cidr_blocks" {
 variable "instances_per_subnet" {
   description = "Number of EC2 instances per private subnet"
   type        = number
-  default     = 3
+  default     = 2
 }
 
 variable "instance_type" {
